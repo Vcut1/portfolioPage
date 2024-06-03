@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>powerbiPage</title>
+
+    <style>
+        h1{
+            display: inline-block;
+        }
+
+        #Home{
+            color: white;
+            background-color: rgb(24, 132, 227);
+            height: 50px;
+            width: 100px;
+            border-radius: 20px;
+            font-size: 20px;
+        }
+
+        #Home:hover{
+            background-color:rgb(21, 94, 158);
+        }
+
+        .pBlock{
+            width: 1000px;   
+        }
+
+        h2{
+            display: block;
+            margin-left: 15%;
+        }
+
+        h3{
+            font-size: 40px;
+            font-family:sans-serif;
+            font-weight: 150;
+            width: 1000px;
+            display: block;
+            margin-left: 550px;
+        }
+
+        h4{
+            font-size: 20px;
+            font-style: italic;
+            font-family:sans-serif;
+            font-weight: 100;
+            width: 1000px;
+            display: block;
+            margin: auto;
+            background-color:rgb(1, 32, 57);
+            border-radius: 20px;
+            padding: 20px;
+        }
+
+        .pbibtn {
+            color: white;
+            background-color: rgb(219, 33, 33);
+            height: 50px;
+            border-radius: 10px;
+            font-size: 20px;
+        }
+
+        .pbibtn:hover{
+            background-color: rgb(77, 1, 1);
+
+        }
+
+    </style>
+</head>
+<body>
+    <h1>
+        <button id="Home" onclick=window.location="Project.html">
+            Home
+        </button>
+    </h1><br/>
+    <h2>
+        <button id="pbiwordbtn" class="pbibtn" onclick=window.location="AbtProject.html" style="margin-right: 10px;">About The Project</button>
+    </h2>
+    <h3>HoverCar Project</h3><br/>
+    <h4 class="paragraphContainer">
+        <p>
+            <div class="pBlock">
+                <object data="powerbireportslides.pdf" application/pdf" width="100%" height="700px">
+                </object>
+            </div>
+                
+        </p>
+    </h4>
+</body>
+</html>

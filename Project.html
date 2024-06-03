@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vince Cutlip Portfolio</title>
+
+    <style>
+         #boxMain{
+            border: 5px solid rgb(23, 23, 23);
+            height: 150px;
+            background-image: url("linkedinbackground2.png");
+            background-size: cover;
+         }
+
+        .vcLogo{
+            height: 150px;
+            width: 150px;
+            border-radius: 10px;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            display: inline-block;
+            background-image: url("linkedinbackground1.webp");
+            box-sizing: border-box;
+            border-radius: 5px;
+            z-index: 1;
+        }
+        .navbar {
+		    background-color: #333;
+		    position: relative;
+		    z-index: 999;
+            border-radius: 10px;
+	    }
+
+	    .navbar ul {
+		    list-style-type: none;
+		    margin: 0;
+		    padding: 0;
+            background: rgb(23, 14, 118);
+            border-radius: 10px;
+	    }
+
+	    .navbar li {
+	    	display: inline-block;
+	    }
+
+    	.navbar li a {
+	    	color: white;
+	    	display: block;
+	    	padding: 10px 20px;
+            text-decoration: none;
+    	}
+
+    	/* Style the dropdown menu */
+    	.navbar ul ul {
+	    	position: absolute;
+	    	top: 100%;
+	    	display: none;
+	    }
+
+	    .navbar ul ul li {
+        	display: block;
+    	}
+
+	    .navbar li:hover ul {
+	    	display: block;
+            background-color: rgb(0, 0, 92);
+	    }
+
+	    /* Change the background color of dropdown links on hover */
+	    .navbar ul ul li a:hover {
+		    background-color: #1400c5;
+            cursor: pointer;
+	    }
+        
+        /*Grid items*/
+
+        .grid-container-1{
+            background-color: black;
+            padding: 1px;
+            display: grid;
+            grid-template-rows: 100px;
+            grid-template-areas: "header header" 
+        }
+
+        .grid-container-2{
+            color: white;
+            background-color: black;
+            padding: 1px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 250px 250px;
+            grid-template-areas:  
+            "content content content"
+            "content content content";
+            z-index: 2;
+        }
+        .grid-container-3{
+            background-color: black;
+            padding: 1px;
+            display: grid;
+            grid-template-rows: 80px;
+            grid-template-areas: "header header header" 
+        }
+        .grid-item-1{
+            color: white;
+            background-color: rgb(14, 3, 137);
+            border:  10px solid rgb(0, 0, 0);
+            padding: 25px;
+            font-size: 30px;
+            text-align: center;
+        }
+
+        #welcome{
+            font-size: 50px;
+            font-style: bolder;
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            border:10px;
+            color: gold;
+            background-color: black;
+        }
+
+        #topMessage{
+            border-radius: 50px;
+            border-bottom: 10px;
+            border-top: 10px;
+            font-size: 24px;
+            text-align: center;
+            background-color: rgb(16, 16, 56);
+        }
+        
+        .grid-item-2{
+            color: white;
+            background-color: rgb(143, 132, 247);
+            border:5px solid rgb(63, 55, 142);
+            border-radius: 50px;
+            padding: 15px;
+            font-size: 20px;
+            text-align: center;
+            font-size: 50px;
+            color: white;
+            margin: 5px;
+        }
+
+        .grid-item-2:hover{
+            background-color: rgb(42, 31, 111);
+            font-size: 55px;
+            text-shadow: 10px color(black red green rgb(38, 38, 38));
+        }
+        
+        .grid-item-3{
+            color: white;
+            background-color: rgb(0, 0, 0);
+            padding: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        .powerbilogo {
+            border-radius:20px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <!--Top Box, logo, and dropdown links-->
+    <div id="boxMain">
+      <Img class="vcLogo" src=VCLogo.jpg>
+        <h1>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#">Home</a>
+                        <ul>
+                            <li><a onclick=window.location="About.html">About Vince</a></li>
+                            <li><a onclick=window.location="Resume.html">Resume</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Samples</a>
+                        <ul>
+                            <li><a onclick = window.location="powerbi.html">Power BI</a></li>
+                            <li><a href="#">(coming soon!)</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="mailto:vincecutlip@yahoo.com">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+                </div>
+            </ul>
+        </nav>
+        </h1>
+    </div>
+
+    <!--Grid 1/ welcome bar-->
+
+    <div class="grid-container-1">
+        <div id=welcome class="grid-item-1"> Vince Cutlip Portfolio Page</div>
+        <div id=topMessage class="grid-item-1">This site was created by Vince Cutlip using HTML, CSS, and JavaScript. 
+            Please use the navigation bar above, or select from the options below.</div>
+    </div>
+
+    <!-- Grid 2 items-->
+
+    <div class="grid-container-2">
+        <div class="grid-item-2">
+                <a id=headShot onclick=window.location="About.html">
+                    <Img class="headShot" src=self1.jpg style="height: 200px; width: 200px; border-radius: 20px;">
+                </a>
+             </div>
+        <div class="grid-item-2">
+                <a id=resumeButton onclick=window.location="Resume.html">
+                    <Img class="reumeLogo" src=resumeLogo.png style="height: 200px; width: 200px;">
+                </a>
+            </div>
+        <div class="grid-item-2"> 
+                <a id=linkedInButton onclick="window.open('https://www.linkedin.com/in/vincent-cutlip-08585a259/');">
+                    <Img class="linkedINLogo" src=linkedINLogo.png style="height: 200px; width: 200px;">
+                </a>
+            </div>
+        <div class="grid-item-2"> 
+            <a id=powerbi onclick = window.location="powerbi.html">
+                <Img class="powerbilogo" src=pbilogo.jpg style="height: 200px; width: 200px;"></a>
+            </div>
+        <div class="grid-item-2"> (Coming Soon!)</div>
+        <div class="grid-item-2"> (Coming Soon!)</div>
+    </div>
+    <div class="grid-container-3">
+        <div class="grid-item-3">Created 05/10/2024</div>
+        <div class="grid-item-3"></div>
+        <div class="grid-item-3">email: vincecutlip@yahoo.com</div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AbtProject</title>
+
+    <style>
+        h1{
+            display: inline-block;
+        }
+
+        #Home{
+            color: white;
+            background-color: rgb(24, 132, 227);
+            height: 50px;
+            width: 100px;
+            border-radius: 20px;
+            font-size: 20px;
+            margin: 10px;
+        }
+
+        #Home:hover{
+            background-color:rgb(21, 94, 158);
+        }
+
+        #backtoslidedeck{
+            color: white;
+            background-color: rgb(219, 33, 33);
+            height: 50px;
+            width: 150px;
+            border-radius: 10px;
+            font-size: 20px;
+        }
+
+        #backtoslidedeck:hover{
+            background-color: rgb(77, 1, 1);
+        }
+
+        .pBlock{
+            width: 800px;   
+        }
+
+        h2{
+            font-size: 40px;
+            font-family:sans-serif;
+            font-weight: 150;
+            width: 1000px;
+            display: block;
+            margin-left: 550px;
+        }
+
+        h3{
+            font-family:sans-serif;
+            width: 800px;
+            display: block;
+            margin: auto;
+            background-color: rgb(250, 222, 252);
+            border-radius: 20px;
+            padding: 20px;
+        }
+
+        .subheading{
+            font-size: 25px;
+        }
+
+        .paragraph{
+            font-size: 20px;
+            font-weight: 100;
+            margin-left:20px;
+        }
+
+        .subparagraph{
+            font-size: 15px;
+            font-weight: 75;
+            margin-left: 40px;
+        }
+            
+    </style>
+</head>
+<body>
+    <h1>
+        <button id="Home" onclick=window.location="Project.html">
+            Home
+        </button>
+        <button id="backtoslidedeck" onclick=window.location="powerbi.html">
+             Back To Slides
+        </button>
+    </h1><br/>
+    <h2>
+        HoverCar Project
+    </h2><br/>
+    <h3 class="paragraphContainer">
+        <p>
+            <div class="subheading">About The Presentation</div><br/>
+            <div class="paragraph">•	The presentation follows a mock sales report presentation, 
+                but is mostly being used to showcase the various visuals, slicers, cross-filtering, 
+                and calculation used in the actual PowerBI program should you not choose, or be able, 
+                to open and view the PBI file.</div><br/>
+            <div class="paragraph">•	The talking points and takeaways I have chosen are used 
+                primarily to showcase
+                 the cross-filter and interactivity of visuals, and are more “interesting findings” 
+                 than “actual focal points”. For the sake of the report, 
+                pretend they are focal points carrying over from a previous 
+                meeting/presentation.</div><br/>
+            <div class="paragraph">•	Customer Insights and Inventory were simply included 
+                to showcase these type of 
+                pages and ideas in PowerBI (pretend this is just part of the Sales Report, or maybe 
+                the SCM management/Customer Satisfaction teams are involved).</div><br/>
+            <div class="paragraph">•	These findings are purely fictional, based on 
+                the randomized/fictional 
+                data, and are in no way intended to represent any personal findings or beliefs 
+                related to any industry or groups of people in real life. 
+                See below for data details.</div><br/>
+                <br/>
+            <div class="subheading">About The Data</div><br/>
+            <div class="paragraph">•	This report uses self-created Excel sales data based 
+                on a fictional vehicle company “Vince’s HoverCars” that sells HoverCars 
+                (vehicles), along with Sidecars, custom windshields, and spoilers as accessory 
+                items. The Report reflects sales dates between 1/1/2023 and 5/14/2024, with the 
+                focus being 2023 sales.  Most items and datapoints were randomly generated within 
+                set parameters, then adjusted to reflect a realistic dataset as noted below.</div><br/>
+            <div class="paragraph">•	Production cost for COGS was set at roughly 80% 
+                of sale price for vehicles (HoverCars) and 50% of sale price for sidecars 
+                and accessories to create a different markup and variance.</div><br/>
+            <div class="paragraph">•	1500 customer names were generated from various online 
+                baby name lists and databases with several popular names being purposefully 
+                repeated for realism. Age was assigned between 18 and 100 at random. Gender was 
+                assigned based mostly on the original data source, with some carinae, and several 
+                omitted (O) for realism (used for non-binary or non-identifying). Emails and phone 
+                numbers were created with 5-10% of entries being omitted for realism.</div><br/>
+            <div class="paragraph">•	Sales Data includes 1770 sales between 1/1/2023 
+                and 5/14/2024 that are randomly generated and assigned to customers. HoverCar 
+                sales were kept at 1-per-transaction for realism, while accessories were generated 
+                at random between 1-3 per sale (for windshield, sidecar, and spoiler options). Time 
+                of Sale was randomly assigned between 0800 (8AM) and 1800 (6PM) assuming standard 
+                business hours.</div><br/>
+            <div class="paragraph">•	Inventory sets initial stock to 200% of QTY sold 
+                (after it was fully calculated for accurate sample purposes) for each 
+                HoverCar and SideCar, and 200% + 50 extra units for all accessory items 
+                to simulate more realistic stock between the vehicles and smaller accessory 
+                items. Stock was then either added or depleted at random at between 1 and 3 for 
+                each month to simulate inventory change. There is no dataset for incoming 
+                stock/inventory, as I believe the randomize data simulates 
+                that well enough.</div><br/>
+            <div class="paragraph">•	There are 203 products, broken down into 4 main 
+                categories, 8 subcategories, and various color options for each. Prices were 
+                generated to reflect popular color and package choices similar to the automotive 
+                industry (i.e. Black costs more than Orange, SS package is more than 
+                standard, etc.)</div><br/>
+            <div class="paragraph">•	A separate Date Table was added for Report 
+                Analysis modeling purposes.</div><br/>
+            <div class="paragraph">•	Dax Formulas used for Measures/calculations:</div><br/>
+            <div class="subparagraph">o	Quarter = FORMAT('Date Table'[Date],"\QQ")
+                o	Birth_Month = MONTH(Customer_Information[Date_of_Birth])<br/>
+                o	Birth_Month_Name = FORMAT(Customer_Information[Date_of_Birth],"MMM")<br/>
+                o	Total Change = Inventory[Jan 24]-Inventory[Jan 23]<br/>
+                o	Profit = SUM('Sales_Data'[Total Revenue])-SUM(Inventory[Cost_of_Production])<br/>
+                o	Sales Margin = DIVIDE([Profit],SUM('Sales_Data'[Total Revenue]),0)<br/>
+            </div><br/>   
+        </p>
+    </h3>
+</body>
+</html>
